@@ -1,0 +1,144 @@
+
+        
+        local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+        local Window = Library.CreateLib("Dreps Hub", "DarkTheme")
+
+        local Main = Window:NewTab("Main")
+
+        local MainSection = Main:NewSection("Farm")
+
+        MainSection:NewButton("Auto Click", "Automatically clicks for you.", function()
+            loadstring(game:HttpGet('https://pastebin.com/raw/AANPLtM6'))()
+        end)
+
+        MainSection:NewToggle("On/Off", "Turn auto clicker on and off", function(state)
+            if state then
+                loadstring(game:HttpGet('https://pastebin.com/raw/AANPLtM6'))()
+            else
+                loadstring(game:HttpGet('https://pastebin.com/raw/P1Gci503'))()
+            end
+        end)
+
+
+
+        MainSection:NewButton("Auto Rebirth", "Automatically rebirths for you.", function()
+            loadstring(game:HttpGet('https://pastebin.com/raw/4J8NkYKy'))()
+        end)
+
+        MainSection:NewToggle("On/Off", "Turn auto rebirth on and off", function(state)
+            if state then
+                loadstring(game:HttpGet('https://pastebin.com/raw/BEfw1fc4'))()
+            else
+                loadstring(game:HttpGet('https://pastebin.com/raw/mQR1QQST'))()
+            end
+        end)
+
+
+        local Tab = Window:NewTab("Misc")
+
+        local TeleportsSection = Tab:NewSection("Teleport")
+    
+       
+        
+       
+        TeleportsSection:NewButton("Upgrades", "Teleport to upgrades shop.", function()
+            loadstring(game:HttpGet('https://pastebin.com/raw/NXUjkz0v'))()
+        end)
+
+        TeleportsSection:NewButton("Skins", "if you get trapped turn on shiftlock).", function()
+            loadstring(game:HttpGet('https://pastebin.com/raw/9sMkZ2FR'))()
+        end)
+
+        TeleportsSection:NewButton("Ranks", "Teleport to ranks shop.", function()
+            loadstring(game:HttpGet('https://pastebin.com/raw/6Xh9dVbz'))()
+        end)
+
+        TeleportsSection:NewButton("Rebirths", "Teleport to rebirth shop.", function()
+            loadstring(game:HttpGet('https://pastebin.com/raw/R8yYtkiS'))()
+            end)
+        
+         TeleportsSection:NewButton("Spawn", "Teleport to spawn.", function()
+            loadstring(game:HttpGet('https://pastebin.com/raw/WkrvD0sW'))()
+            end)
+        
+        
+        
+
+        local IslandSection = Tab:NewSection("Island Teleports")
+
+        IslandSection:NewButton("Crystal Island", "Teleport to Crystal Island", function() -- 1
+            loadstring(game:HttpGet('https://pastebin.com/raw/rD2jMzmT'))()
+        end)
+
+        IslandSection:NewButton("Vulcan Island", "Teleport to Vulcan Island", function() -- 2 -- on this
+            loadstring(game:HttpGet('https://pastebin.com/raw/aJbgH8Kx'))()
+        end)
+
+        IslandSection:NewButton("Forest Island", "Teleport to Forest Island", function() -- 3
+            function teleportTO(placeCFrame)  -- teleport script
+                local plyr = game.Players.LocalPlayer
+                if plyr.Character then
+                 plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+                end
+            end
+            teleportTO(game:GetService("Workspace").Islands.Island3.Union.CFrame) -- MUST HAVE CFrame
+        end)
+
+        IslandSection:NewButton("Angel Island", "Teleport to Angel Island", function() -- 4
+            function teleportTO(placeCFrame)  -- teleport script
+                local plyr = game.Players.LocalPlayer
+                if plyr.Character then
+                 plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+                end
+            end
+            teleportTO(game:GetService("Workspace").Islands.Island4.Union.CFrame) -- MUST HAVE CFrame
+        end)
+
+      
+
+        IslandSection:NewButton("Hacker Island", "Teleport to Hacker Island", function() -- 6 
+            function teleportTO(placeCFrame)  -- teleport script
+                local plyr = game.Players.LocalPlayer
+                if plyr.Character then
+                 plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+                end
+            end
+            teleportTO(game:GetService("Workspace").Islands.Island6.Union.CFrame) -- MUST HAVE CFrame
+        end)
+
+        IslandSection:NewButton("Mythical Island", "Teleport to Mythical Island", function() -- 7 
+            function teleportTO(placeCFrame)  -- teleport script
+                local plyr = game.Players.LocalPlayer
+                if plyr.Character then
+                 plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+                end
+            end
+            teleportTO(game:GetService("Workspace").Islands["Island 7"].Part.CFrame) -- MUST HAVE CFrame
+        end)
+
+        IslandSection:NewButton("Russo Island", "Teleport to Russo Island", function() -- 8
+            function teleportTO(placeCFrame)  -- teleport script
+                local plyr = game.Players.LocalPlayer
+                if plyr.Character then
+                 plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+                end
+            end
+            teleportTO(game:GetService("Workspace").Portals["Russo Island"].Part.CFrame) -- MUST HAVE CFrame
+        end)
+
+        IslandSection:NewButton("Training Island", "Teleport to Training Island", function() -- 8
+            function teleportTO(placeCFrame)  -- teleport script
+                local plyr = game.Players.LocalPlayer
+                if plyr.Character then
+                 plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+                end
+            end
+            teleportTO(game:GetService("Workspace").Portals["Training-Island"].Part.CFrame) -- MUST HAVE CFrame
+        end)
+
+       
+       
+        MainSection:NewKeybind("Click to Toggle UI", "Right Control", Enum.KeyCode.RightControl, function()
+            Library:ToggleUI()
+        end)
